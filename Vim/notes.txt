@@ -1,0 +1,80 @@
+1. Basics
+
+	A. Start and quit Vim
+		// Start Vim
+		$ vim 
+		// Quit Vim
+		esc OR ctrl-C ----> :qa!
+
+		: = Prefix for entering command-line mode 
+		q = Shortcut for quit
+		a = All buffers
+			- You can have several files open in Vim
+			- This lets you quit all of them
+		! = Force
+
+	B. Dual mode 
+		Two modes: insert mode & normal mode
+			1. Insert mode for writing text -> press I to enter insert mode | press esc to enter normal mode
+			2. Normal mode for manipulating text
+				In normal mode, each key has meaning related to text manipulation 
+				Vim starts in normal mode
+		
+
+
+	C. Insert text
+		vim textfile.txt
+		press i to enter insert mode
+
+	D. Save and quit
+		vim textfile.txt
+		press i to enter insert mode 
+		after entering text, press esc or Ctrl-C 
+		then type :w 
+
+
+		To write to a file:
+			:w textFile.txt // Creates or opens file
+
+		To edit file:
+			:e textFile.txt 
+
+		To see file currently editing
+			Ctrl-G
+
+	Challenge: Create a file called knowledge.txt that contains the following content:
+		"The only source of knowledge is experience."
+
+	step 1:
+		$ vim knowledge.txt 
+
+		~i 
+
+		~ "insert text here"
+
+		Ctrl-C 
+
+		:wq then enter
+
+
+YT: Vim basics, C programming and compiling
+
+	$ vim sum.c 
+
+	press i to enter INSERT mode
+
+	Enter code like any editor.
+
+	Then press esc or Ctrl-C 
+
+	Then type :wq to quit
+
+	gcc sum.c -o sum // Compile
+
+	./sum	// To run file
+
+	OR
+	
+	cc hello.c 
+
+	./a.out     -> To run the program

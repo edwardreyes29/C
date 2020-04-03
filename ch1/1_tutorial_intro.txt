@@ -1,0 +1,45 @@
+   Create a file:
+    touch filename.txt 
+
+    edit file:
+        cat > filename.txt 
+            press Ctrl-D when finished 
+    Display contents in file:
+        cat filename.txt 
+
+
+    // Read from a text file in C:
+    ./cprogram < filename.txt
+   
+    %d - integers
+    %f - float
+    %o - octal
+    %x - hexadecimal 
+    %s - character string
+    %% - % itself
+
+V. Characer Input and Output
+
+    text stream: sequence of characters divded into lines
+    a d g g g h d \n
+    k i d w i l d \n
+
+    Repsonisibility of the library to make each input or output stream conform to this model.
+
+    getchar // reads next input character from text stream and returns its value.
+    - returns a distinctive value when there is no more solution. EOF - end of file 
+
+        c = getchar() // c contains next character input
+
+    putchar // prints a character each time it is called.
+
+    putchar(c)  // prints contents of the integer variable c as a character
+
+    A. File Copying
+        read a character 
+        while (characcter is not end-of-file indicator)
+            output the character just read
+            read a character 
+
+
+
