@@ -1,1 +1,4 @@
-This is some text from this file.
+The human body is made up of 70% water, 30% everything else I care to remember.
+Password: must contain special characters such as:
+!,@,#,$,%,^,&,*,(,),-,_,+,=,:,;,',",\,|,?,/,<,>
+example password: password<>1234
