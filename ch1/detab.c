@@ -1,4 +1,3 @@
-// Exercise 19
 #include <stdio.h>
 
 #define MAXLINE 1000
@@ -55,5 +54,8 @@ void detab(char to[], char from[]) {
             ++i;
         ++j;
     }
+    /* copy: copy 'from' into 'to'; assum to is big enough 
+    This is a comment
+    */
     
 }

@@ -1,4 +1,20 @@
-// Exercise 19
+/* Edward Reyes <edwardtreyes.com> */
+
+/*/
+    Exercise 1-19: Remove C comments
+
+    This program reads a .c file and removes all comments
+    before outputting it's contents. I've used two states
+    IN and OUT to determine if the current character is
+    within a comment.
+
+    It works for most single line and multi-line 
+    commnets. However when comments contain multiple
+    asterisks (*) or forward slashes (/) it has
+    unexpected results, such as the next line not appearing
+    or left over characters from the removed comment being
+    present.
+*/
 #include <stdio.h>
 
 #define MAXLINE 1000
@@ -33,23 +49,30 @@ void removeComments(char str[], int lim)
             ++singleCount;
             ++multiCount;
 
-            if (singleCount % SINGLECOMMENT == 0 || multiCount % MULTICOMMENT == 0){
+            if (singleCount % SINGLECOMMENT == 0){
                 singleCount = 0;
                 multiCount = 0;
                 
-            } 
+            } else if (multiCount % MULTICOMMENT == 0) {
+                multiCount = 0;
+                singleCount = 0;
+            }
+
             
         } else if (c == '*' && state == IN) {
             ++multiCount;
             singleCount = 0;
         }
-        else if (c == '\n' && multiCount < 1 && singleCount < 1){
+        else if (c == '\n' && multiCount < 1 && singleCount < 1) {
             putchar(c);
-            state = OUT;
-        }    
-        else if ((multiCount < 1) && (singleCount < 1) && (state == OUT)) 
-                putchar(c);        
-        
+                state = OUT;
+        }
+        else {
+            if ((multiCount < 1) && (singleCount < 1) && (state == OUT)) {
+                putchar(c);
+            }
+                
+        }
     }
 }
 
