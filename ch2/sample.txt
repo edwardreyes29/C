@@ -1,0 +1,9 @@
+The maximum value of UNSIGNED CHAR = 255                                    
+The minimum value of SHORT INT = -32768                                     
+The maximum value of SHORT INT = 32767                                      
+The minimum value of INT = -2147483648                                      
+The maximum value of INT = 2147483647                                       
+The minimum value of CHAR = -128                                            
+The maximum value of CHAR = 127                                             
+The minimum value of LONG = -9223372036854775808                            
+The maximum value of LONG = 9223372036854775807
