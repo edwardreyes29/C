@@ -5,13 +5,21 @@
 int strLen(char s[]); 
 int atoi(char s[]);
 int lower(int c);
-
+void squeeze(char s[], int c);
+void strCat(char s[], char t[]);
 int main() {
 
     // strlen example
     char first[] = "Edward";
     char last[] = {'R','e','y','e','s','\0'};
+    char word[] = "Construction Workers";
     const char msg[] = "warning: ";
+
+    strCat(first, last);
+    printf("strCat: %s\n", first);
+
+    squeeze(word, 'o');
+    printf("Squeeze: %s\n", word);
 
     printf("First length: %d\n",strLen(first));
     printf("Last length: %d\n", strLen(last));
@@ -68,4 +76,29 @@ int lower(int c) {
         return c + 'a' - 'A';
     }
         
+}
+
+/* squeeze: delete all c from s */
+void squeeze(char s[], int c) {
+    int i, j;
+
+    for(i = j = 0; s[i] != '\0'; i++) 
+        if (s[i] != c)
+            s[j++] = s[i];
+    s[j] = '\0';
+}
+
+/* strCat: concatenate t to end of s; s must be big enough */
+void strCat(char s[], char t[]) {
+    int i, j;
+
+    i = j = 0; 
+    while (s[i] != '\0')    /* find end of s */
+        i++;
+
+    printf("s[i]: %c",s[i]);
+    s[i] = ' ';
+    ++i;
+    while ((s[i++] = t[j++]) != '\0') /* copy t */
+        ;
 }
